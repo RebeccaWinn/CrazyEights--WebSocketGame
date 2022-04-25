@@ -1,0 +1,137 @@
+
+/* font-family: 'Fjalla One', sans-serif;
+font-family: 'Changa', sans-serif; */
+
+.card{
+    font-size: large;
+    border: lightslategrey;
+    border-style: double;
+    border-radius: 10px;
+    padding:15px;
+}
+.value{
+    margin-right:150px;
+    font-weight: 45px;
+    font-size: 40px;
+}
+.suit.spades{
+    display: flex;
+    padding-right: 50px;
+    background-image:url("spades.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height:200px;
+    width:200px;
+
+} 
+.suit.diamonds{
+    padding-right: 50px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url("diamonds.jpg");
+    height:200px;
+    width:200px;
+}
+.suit.hearts{
+    padding-right: 50px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url("hearts.jpg");
+    height:200px;
+    width:200px;
+}
+.suit.clubs{
+    display: flex;
+    padding-right: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image:url("clubs.jpg");
+    height:200px;
+    width:200px;
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom:25px;
+    margin-bottom:0px;
+    font-family: 'Fjalla One', sans-serif;
+   
+}
+.chosen{
+    font-size: 25px;
+}
+.rcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-right:150px;
+}
+.rppcontainer{
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    flex-wrap:wrap;
+    margin-left:530px;
+}
+.rpcontainer{
+    margin-top: 50px;
+
+    display: flex;
+    text-align: center;
+    flex-wrap:wrap;
+    margin-left:100px;
+}
+.center{
+    text-align: center;
+    margin-top:5px;
+    margin-bottom:0px;
+   
+}
+h2{
+    font-size: 40px;
+    text-align: center;
+    margin:0;
+}
+ul{
+    text-align: center;
+    list-style: none;
+    
+}
+button {
+    background-color:rgb(255, 255, 255);
+    border:1px double black;
+    color:black;
+    font-size: 20px;
+  
+}
+.draw{
+    text-align: center;
+    font-size: 25px;
+}
+input{
+    margin:8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    background-color: white;
+    line-height:10px;
+    padding:5px;
+    font-size: 18px;
+}
+body{
+    font-family: 'Changa', sans-serif; 
+    font-size: 20px;
+}
+.imgtext{
+    position: absolute;
+    text-align: center;
+    margin-top:150px;
+    font-size: 75px;
+    margin-left:300px;
+}
+.border{
+    border:5px double;
+}

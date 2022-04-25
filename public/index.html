@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Changa&family=Fjalla+One&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div id="app">
+
+        <h1 class="imgtext">Crazy Eights</h1>
+        <img  src="background.jpeg" height=450px; width=100%>
+        <div class="border"></div>
+
+        <div class="center">
+            <div v-if="!join">
+                <h2>Rules of the Game</h2>
+                <ul>
+                    <li>Each player is dealt seven cards.</li>
+                        <li>First player adds to the discard pile by playing one card that matches the top card on the discard pile either by suit or by rank (i.e. 6, jack, ace, etc.).</li>
+                        <li> A player who cannot match the top card on the discard pile by suit or rank must draw cards until he can play one.</li>
+                       <li>All eights are wild and can be played on any card during a player's turn.</li>
+                        <li>When a player discards an eight, he chooses which suit is now in play.</li>
+                       <li>The next player must play either a card of that suit or another eight.</li>
+                        <li>The first player to discard all of his cards wins.</li>
+                </ul>
+                <h2>Join Game</h2>
+                Name:<input type="text" v-model="nameToSend">
+                <button v-on:click="sendPlayerName">Send</button>
+                <br>
+                <br>
+                <br>
+                <div class="border"></div>
+
+            </div>
+
+
+            <div v-if="join">
+            <div class="rppcontainer">
+            <div class="rcontainer">
+            <h2>Players</h2>
+           
+            <ul class="chosen">
+                <li v-for="player in players">
+                    {{ player.name }}
+                </li>
+            </ul>
+           
+
+            </div>
+        
+              
+        <!-- CHAT -->
+        <div class="rcontainer">
+        <h2>Send a message</h2>
+        
+        <input type="text" v-model="messageToSend">
+        <button v-on:click="sendMessage">Send</button>
+        <ul class="chosen">
+          <li v-for="incomingMessage in incomingMessages">
+            {{incomingMessage.name}} says
+            {{ incomingMessage.message }}
+          </li>
+        </ul>
+        </div>
+        </div>
+        <div>                <div class="border"></div>
+
+            <h2 > Discard Pile</h2>
+            <ul class="rpcontainer">
+            <li v-for="(playedCard,index) in playedCards">
+                <div class="card">
+                    <div class="value">
+                        {{playedCard.value}}
+                    </div>
+                    <div class="suit" v-bind:class="playedCard.suit"></div>
+
+                </div>
+            </li>
+            </ul>
+            
+        </div>
+        <div class="border"></div>
+        <h2>Your Cards</h2>
+        
+             <ul class="rpcontainer">
+                <li v-for="(card,index) in playerDeck1">
+                        <div class="card" v-on:click="playerTurn(index),playCard(card)">
+                            <div class="value">
+                                {{card.Value}}
+                            </div>
+                            <div class="suit" v-bind:class="card.Suit"></div>
+                        </div>
+                        
+                    </li>
+                </ul> 
+                <button class="draw" v-on:click="drawCard()">Draw Card</button>
+                <br>
+                <br>
+       </div>
+    </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="app.js"> </script>
+
+    </body>
+</html>
